@@ -1,10 +1,29 @@
 body {
   background-color: #203547;
   color: white;
-  margin: 30px auto;
   font-family: Arial;
 }
 
 h3 {
   color: #44A447;
+}
+
+div {
+  padding-left: 40px;
+  padding-bottom: 20px;
+}
+
+input {
+  width: 200px;
+}
+
+.container {
+  padding-left: 100px;
+}
+
+li {
+  border: 1px solid white;
+  padding-left: 10px;
+  width: 300px;
+  list-style: none;
 }

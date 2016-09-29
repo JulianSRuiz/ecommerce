@@ -1,14 +1,14 @@
-const mainCtrl = require("./mainCtrl.js");
+const productCtrl = require("./productCtrl.js");
 
 module.exports = app => {
   app.route("/api/products")
-    .post(mainCtrl.postProducts)
-    .get(mainCtrl.getProducts)
+    .post(productCtrl.postProducts)
+    .get(productCtrl.getProducts)
 
   app.route("/api/products/:id")
-    .get(mainCtrl.getProduct)
-    .put(mainCtrl.updateProduct)
-    .delete(mainCtrl.deleteProduct);
+    .get(productCtrl.getProduct)
+    .put(productCtrl.updateProduct)
+    .delete(productCtrl.deleteProduct);
   // app.get('/api/products', mainCtrl.getProducts);
   // app.get('/api/products/:id', mainCtrl.getProductsById);
   // app.post('/api/products', mainCtrl.postProducts);

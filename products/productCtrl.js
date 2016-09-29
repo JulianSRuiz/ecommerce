@@ -1,5 +1,5 @@
 //const mongo = require("mongojs");
-const Product = require("./Product")
+const Product = require("./Product").productModel;
 //const db = mongo("ecommerce", ["products"]);
 
 module.exports = {
@@ -42,11 +42,11 @@ module.exports = {
     });
   },
   deleteProduct(req, res) {
-    Product.remove({}, (err, products) => {
+    Product.findByIdAndRemove(req.params.id, (err, product) => {
       if (err) {
         return res.status(500).json(err);
       }
-      return res.status(200).json(products);
+      return res.status(200).json(product);
     });
   },
 
